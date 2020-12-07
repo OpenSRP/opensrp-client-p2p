@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <TextView
+        android:text="@string/approve_pairing_request"
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:text="@string/device_pairing_code"
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_connection_id"
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:text="@string/pair_request_sender_prompt"
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+        android:indeterminate="true"/>
+
+</LinearLayout>

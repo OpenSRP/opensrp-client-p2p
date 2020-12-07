@@ -2,6 +2,7 @@ package org.smartregister.p2p.authenticator;
 
 import android.support.annotation.NonNull;
 
+import org.smartregister.p2p.P2PLibrary;
 import org.smartregister.p2p.contract.P2pModeSelectContract;
 import org.smartregister.p2p.sync.DiscoveredDevice;
 
@@ -30,5 +31,9 @@ public abstract class BaseSyncConnectionAuthenticator {
         void onAuthenticationFailed(@NonNull String reason, @NonNull Exception exception);
 
         void onAuthenticationCancelled(@NonNull String reason);
+    }
+
+    public boolean allowSkipQrCodeScan(){
+        return P2PLibrary.getInstance().getOptions().allowSkipQrCodeScan();
     }
 }

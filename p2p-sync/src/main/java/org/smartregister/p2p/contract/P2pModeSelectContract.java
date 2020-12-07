@@ -15,8 +15,8 @@ import org.smartregister.p2p.dialog.SkipQRScanDialog;
 import org.smartregister.p2p.fragment.ErrorFragment;
 import org.smartregister.p2p.fragment.QRCodeGeneratorFragment;
 import org.smartregister.p2p.fragment.QRCodeScanningFragment;
-import org.smartregister.p2p.fragment.SyncProgressFragment;
 import org.smartregister.p2p.fragment.SyncCompleteTransferFragment;
+import org.smartregister.p2p.fragment.SyncProgressFragment;
 import org.smartregister.p2p.model.SendingDevice;
 import org.smartregister.p2p.sync.DiscoveredDevice;
 import org.smartregister.p2p.sync.IReceiverSyncLifecycleCallback;
@@ -53,6 +53,8 @@ public interface P2pModeSelectContract {
 
         boolean removeDiscoveringProgressDialog();
 
+        boolean removeDialog(@NonNull String tag);
+
         void showQRCodeScanningFragment(@NonNull String deviceName, @NonNull QRCodeScanningFragment.QRCodeScanDialogCallback qrCodeScanDialogCallback);
 
         void removeQRCodeScanningFragment();
@@ -61,6 +63,18 @@ public interface P2pModeSelectContract {
                 , @NonNull QRCodeGeneratorFragment.QRCodeGeneratorCallback qrCodeGeneratorCallback);
 
         void removeQRCodeGeneratorFragment();
+
+        void showSenderApprovalDialog(@NonNull String authenticationCode,
+                                      @NonNull String deviceName,
+                                      @Nullable DialogCancelCallback dialogCancelCallback,
+                                      @NonNull DialogApprovedCallback dialogApprovedCallback
+        );
+
+        void showReceiverApprovalDialog(@NonNull String authenticationCode,
+                                        @NonNull String deviceName,
+                                        @Nullable DialogCancelCallback dialogCancelCallback,
+                                        @NonNull DialogApprovedCallback dialogApprovedCallback
+        );
 
         void showConnectionAcceptDialog(@NonNull String receiverDeviceName, @NonNull String authenticationCode
                 , @NonNull DialogInterface.OnClickListener onClickListener);
@@ -95,6 +109,10 @@ public interface P2pModeSelectContract {
 
         interface DialogCancelCallback {
             void onCancelClicked(DialogInterface dialogInterface);
+        }
+
+        interface DialogApprovedCallback {
+            void onApprovedClicked(DialogInterface dialogInterface);
         }
 
         interface OnLocationEnabled {

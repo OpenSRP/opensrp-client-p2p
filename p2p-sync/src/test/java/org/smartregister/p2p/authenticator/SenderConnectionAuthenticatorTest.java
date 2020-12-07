@@ -61,7 +61,8 @@ public class SenderConnectionAuthenticatorTest {
                 .when(view)
                 .getString(Mockito.anyInt());
 
-        senderConnectionAuthenticator = new SenderConnectionAuthenticator(senderPresenter);
+        senderConnectionAuthenticator = Mockito.spy(new SenderConnectionAuthenticator(senderPresenter));
+        Mockito.doReturn(false).when(senderConnectionAuthenticator).allowSkipQrCodeScan();
     }
 
     @Test

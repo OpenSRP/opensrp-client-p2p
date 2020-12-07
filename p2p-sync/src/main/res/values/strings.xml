@@ -117,4 +117,9 @@
     <string name="error_try_turning_wifi_on">Please turn on your device\'s WiFi hardware</string>
     <string name="update_now">Update Now</string>
     <string name="maybe_later">Maybe Later</string>
+    <string name="pair_request_sender_prompt">"%s's device" would like to would like to send you data, Pairing connects the device so that data can be transferred</string>
+    <string name="device_pairing_code">Device pairing code</string>
+    <string name="approve_pairing_request">Approve pairing request?</string>
+    <string name="you_are_attempting_to_send_data_to_device">You are attempting to send data to %s device</string>
+    <string name="approve">Approve</string>
 </resources>

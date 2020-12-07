@@ -158,6 +158,10 @@ public final class P2PLibrary {
         return options.getSyncFinishedCallback();
     }
 
+    public Options getOptions() {
+        return options;
+    }
+
     public static class Options {
 
         private Context context;
@@ -167,6 +171,8 @@ public final class P2PLibrary {
         private ReceiverTransferDao receiverTransferDao;
         private SenderTransferDao senderTransferDao;
         private SyncFinishedCallback syncFinishedCallback;
+        private Boolean skipQrCodeScan = true;
+
         @Nullable
         private RecalledIdentifier recalledIdentifier;
         private int batchSize = Constants.DEFAULT_SHARE_BATCH_SIZE;
@@ -246,6 +252,14 @@ public final class P2PLibrary {
 
         public void setRecalledIdentifier(@Nullable RecalledIdentifier recalledIdentifier) {
             this.recalledIdentifier = recalledIdentifier;
+        }
+
+        public boolean allowSkipQrCodeScan() {
+            return skipQrCodeScan != null && skipQrCodeScan;
+        }
+
+        public void setSkipQrCodeScan(boolean skipQrCodeScan) {
+            this.skipQrCodeScan = skipQrCodeScan;
         }
     }
 }

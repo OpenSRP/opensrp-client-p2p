@@ -25,6 +25,7 @@ public interface Constants {
         String START_RECEIVE_MODE_PROGRESS = "dialog_start_receive_mode_progress";
         String SKIP_QR_SCAN = "skip_qr_scan";
         String CONNECTING = "connecting";
+        String DISPLAY_APPROVAL_KEY = "display_approval";
     }
 
     interface Fragment {

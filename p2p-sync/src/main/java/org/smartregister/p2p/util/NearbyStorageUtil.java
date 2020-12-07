@@ -26,11 +26,12 @@ public class NearbyStorageUtil {
                 if (nearbyFolder.exists()) {
                     File[] nearbyDirectoryFiles = nearbyFolder.listFiles();
 
-                    for(File nearbyFile: nearbyDirectoryFiles) {
-                        if (nearbyFile.delete()) {
-                            Timber.e("Could not delete %s", nearbyFile.getAbsoluteFile());
+                    if (nearbyDirectoryFiles != null)
+                        for (File nearbyFile : nearbyDirectoryFiles) {
+                            if (nearbyFile.delete()) {
+                                Timber.e("Could not delete %s", nearbyFile.getAbsoluteFile());
+                            }
                         }
-                    }
                 }
             }
 
