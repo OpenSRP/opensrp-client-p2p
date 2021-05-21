@@ -11,17 +11,18 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
-import android.support.annotation.VisibleForTesting;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.annotation.VisibleForTesting;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.common.api.ApiException;
@@ -68,7 +69,6 @@ import java.util.TreeSet;
 import timber.log.Timber;
 
 public class P2pModeSelectActivity extends AppCompatActivity implements P2pModeSelectContract.View {
-
 
     private P2pModeSelectContract.SenderPresenter senderBasePresenter;
     private P2pModeSelectContract.ReceiverPresenter receiverBasePresenter;
@@ -365,7 +365,7 @@ public class P2pModeSelectActivity extends AppCompatActivity implements P2pModeS
     @Override
     public void showConnectionAcceptDialog(@NonNull String receiverDeviceName, @NonNull String authenticationCode
             , @NonNull final DialogInterface.OnClickListener onClickListener) {
-        new android.support.v7.app.AlertDialog.Builder(this)
+        new androidx.appcompat.app.AlertDialog.Builder(this)
                 .setMessage(String.format(getString(R.string.accept_connection_dialog_content), authenticationCode))
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     @Override

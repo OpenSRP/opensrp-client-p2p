@@ -2,7 +2,7 @@ package org.smartregister.p2p.sample.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import org.smartregister.p2p.contract.RecalledIdentifier;
 import org.smartregister.p2p.util.Constants;

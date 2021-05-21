@@ -1,12 +1,12 @@
 package org.smartregister.p2p.model.dao;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.WorkerThread;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.WorkerThread;
 
 import org.smartregister.p2p.model.DataType;
-import org.smartregister.p2p.sync.data.MultiMediaData;
 import org.smartregister.p2p.sync.data.JsonData;
+import org.smartregister.p2p.sync.data.MultiMediaData;
 
 import java.util.TreeSet;
 

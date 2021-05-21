@@ -1,6 +1,6 @@
 package org.smartregister.p2p.tasks;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import org.junit.Rule;
 import org.junit.Test;

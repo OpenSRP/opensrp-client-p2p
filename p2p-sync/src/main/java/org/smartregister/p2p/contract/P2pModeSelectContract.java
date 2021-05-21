@@ -2,9 +2,10 @@ package org.smartregister.p2p.contract;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
 
 import com.google.android.gms.nearby.connection.ConnectionLifecycleCallback;
 import com.google.android.gms.nearby.connection.Payload;
@@ -15,8 +16,8 @@ import org.smartregister.p2p.dialog.SkipQRScanDialog;
 import org.smartregister.p2p.fragment.ErrorFragment;
 import org.smartregister.p2p.fragment.QRCodeGeneratorFragment;
 import org.smartregister.p2p.fragment.QRCodeScanningFragment;
-import org.smartregister.p2p.fragment.SyncProgressFragment;
 import org.smartregister.p2p.fragment.SyncCompleteTransferFragment;
+import org.smartregister.p2p.fragment.SyncProgressFragment;
 import org.smartregister.p2p.model.SendingDevice;
 import org.smartregister.p2p.sync.DiscoveredDevice;
 import org.smartregister.p2p.sync.IReceiverSyncLifecycleCallback;

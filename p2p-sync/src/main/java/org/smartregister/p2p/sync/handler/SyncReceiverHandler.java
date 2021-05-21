@@ -1,10 +1,11 @@
 package org.smartregister.p2p.sync.handler;
 
 import android.os.AsyncTask;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.VisibleForTesting;
-import android.support.v4.util.SimpleArrayMap;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.VisibleForTesting;
+import androidx.collection.SimpleArrayMap;
 
 import com.google.android.gms.nearby.connection.Payload;
 import com.google.android.gms.nearby.connection.PayloadTransferUpdate;
@@ -205,7 +206,7 @@ public class SyncReceiverHandler extends BaseSyncHandler {
                 long lastRecordId = P2PLibrary.getInstance().getReceiverTransferDao()
                         .receiveJson(syncPackageManifest.getDataType(), jsonArray);
 
-                updateLastRecord(syncPackageManifest.getDataType().getName(),lastRecordId);
+                updateLastRecord(syncPackageManifest.getDataType().getName(), lastRecordId);
                 return lastRecordId;
             }
         }, new GenericAsyncTask.OnFinishedCallback<Long>() {

@@ -2,7 +2,7 @@ package org.smartregister.p2p.sample;
 
 import android.app.Application;
 import android.os.Build;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import org.smartregister.p2p.P2PLibrary;
 import org.smartregister.p2p.authorizer.P2PAuthorizationService;

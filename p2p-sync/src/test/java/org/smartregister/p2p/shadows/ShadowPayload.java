@@ -1,7 +1,7 @@
 package org.smartregister.p2p.shadows;
 
 import android.os.ParcelFileDescriptor;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.google.android.gms.nearby.connection.Payload;
 

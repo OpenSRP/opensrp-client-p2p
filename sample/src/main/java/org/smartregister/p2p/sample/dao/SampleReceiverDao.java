@@ -1,7 +1,7 @@
 package org.smartregister.p2p.sample.dao;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import org.json.JSONArray;
 import org.smartregister.p2p.model.DataType;

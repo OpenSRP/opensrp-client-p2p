@@ -1,9 +1,9 @@
 package org.smartregister.p2p.util;
 
-import android.support.annotation.NonNull;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ public abstract class DialogUtils {
     public static void dismissAllDialogs(@NonNull FragmentManager fragmentManager) {
         List<Fragment> fragments = fragmentManager.getFragments();
 
-        for (Fragment fragment: fragments) {
+        for (Fragment fragment : fragments) {
             if (fragment instanceof DialogFragment && fragment.isAdded()) {
                 ((DialogFragment) fragment).dismissAllowingStateLoss();
             }

@@ -1,6 +1,6 @@
 package org.smartregister.p2p.sync;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import com.google.android.gms.nearby.connection.Payload;
 
 import org.smartregister.p2p.model.P2pReceivedHistory;

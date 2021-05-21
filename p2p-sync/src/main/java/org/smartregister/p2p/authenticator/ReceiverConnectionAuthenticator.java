@@ -1,7 +1,8 @@
 package org.smartregister.p2p.authenticator;
 
 import android.content.DialogInterface;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 import org.smartregister.p2p.R;
 import org.smartregister.p2p.contract.P2pModeSelectContract;
@@ -43,7 +44,7 @@ public class ReceiverConnectionAuthenticator extends BaseSyncConnectionAuthentic
                         public void onErrorOccurred(@NonNull Exception e) {
                             authenticationCallback.onAuthenticationFailed(getPresenter().getView().getString(R.string.unknown_error_occurred), e);
                         }
-            });
+                    });
 
         } else {
             authenticationCallback.onAuthenticationFailed(getPresenter().getView().getString(R.string.device_information_passed_is_invalid)

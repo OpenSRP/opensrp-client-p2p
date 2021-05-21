@@ -1,7 +1,7 @@
 package org.smartregister.p2p.authenticator;
 
 import android.content.DialogInterface;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.util.SparseArray;
 
 import com.google.android.gms.nearby.connection.ConnectionInfo;

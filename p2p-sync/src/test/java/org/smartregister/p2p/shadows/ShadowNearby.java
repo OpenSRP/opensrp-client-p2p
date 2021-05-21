@@ -1,7 +1,7 @@
 package org.smartregister.p2p.shadows;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.google.android.gms.internal.nearby.zzbd;
 import com.google.android.gms.nearby.Nearby;

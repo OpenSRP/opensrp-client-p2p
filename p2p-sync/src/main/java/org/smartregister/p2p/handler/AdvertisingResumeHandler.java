@@ -1,6 +1,6 @@
 package org.smartregister.p2p.handler;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import org.smartregister.p2p.contract.P2pModeSelectContract;
 
 /**

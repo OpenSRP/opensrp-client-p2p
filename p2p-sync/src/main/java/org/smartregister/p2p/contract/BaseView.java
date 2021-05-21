@@ -1,7 +1,7 @@
 package org.smartregister.p2p.contract;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import org.smartregister.p2p.handler.ActivityRequestPermissionResultHandler;
 import org.smartregister.p2p.handler.ActivityResultHandler;

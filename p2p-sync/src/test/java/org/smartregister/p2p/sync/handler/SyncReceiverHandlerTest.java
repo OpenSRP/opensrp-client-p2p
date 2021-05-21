@@ -1,6 +1,6 @@
 package org.smartregister.p2p.sync.handler;
 
-import android.support.v4.util.SimpleArrayMap;
+import androidx.collection.SimpleArrayMap;
 
 import com.google.android.gms.nearby.connection.DiscoveredEndpointInfo;
 import com.google.android.gms.nearby.connection.Payload;
@@ -351,7 +351,7 @@ public class SyncReceiverHandlerTest {
         long payloadId = 923l;
         int total = 20;
         int sent = 5;
-        int expectedProgress = (5 *100)/20;
+        int expectedProgress = (5 * 100) / 20;
         PayloadTransferUpdate update = Mockito.mock(PayloadTransferUpdate.class);
 
         Mockito.doReturn(PayloadTransferUpdate.Status.IN_PROGRESS)

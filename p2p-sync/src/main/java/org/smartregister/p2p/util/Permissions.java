@@ -4,9 +4,10 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
+
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +17,6 @@ import java.util.List;
  * - Get a list of unauthorised permissions from permissions required
  * - Check if a specific permissions is granted
  * - Request for permissions from an activity
- *
  */
 public abstract class Permissions {
     public static final String[] CRITICAL_PERMISSIONS = new String[]{
@@ -28,7 +28,7 @@ public abstract class Permissions {
             Manifest.permission.CAMERA
     };
 
-    public static final String[] CRITICAL_PERMISSIONS_WITH_STORAGE = new String[] {
+    public static final String[] CRITICAL_PERMISSIONS_WITH_STORAGE = new String[]{
             Manifest.permission.BLUETOOTH,
             Manifest.permission.BLUETOOTH_ADMIN,
             Manifest.permission.ACCESS_WIFI_STATE,
@@ -64,8 +64,8 @@ public abstract class Permissions {
      *
      * @param context
      * @param permission Permission name from constants in {@link android.Manifest.permission}
-     * @return  {@code TRUE} if the permission is authorised
-     *          {@code FALSE} if the permission is not authorised
+     * @return {@code TRUE} if the permission is authorised
+     * {@code FALSE} if the permission is not authorised
      */
     public static boolean isPermissionGranted(@NonNull Context context, @NonNull String permission) {
         return ContextCompat.checkSelfPermission(context, permission) == PackageManager.PERMISSION_GRANTED;

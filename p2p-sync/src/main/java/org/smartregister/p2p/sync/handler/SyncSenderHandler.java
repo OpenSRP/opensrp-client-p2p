@@ -3,10 +3,11 @@ package org.smartregister.p2p.sync.handler;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.ParcelFileDescriptor;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.VisibleForTesting;
 import android.text.TextUtils;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.VisibleForTesting;
 
 import com.google.android.gms.nearby.connection.Payload;
 import com.google.android.gms.nearby.connection.PayloadTransferUpdate;
@@ -137,7 +138,7 @@ public class SyncSenderHandler extends BaseSyncHandler {
 
                             syncPackageManifest = new SyncPackageManifest(awaitingPayload.getId()
                                     , extension
-                                    , dataType,  1);
+                                    , dataType, 1);
 
                             HashMap<String, String> mediaDetails = multiMediaData.getMediaDetails();
                             HashMap<String, Object> payloadDetails = new HashMap<>();
@@ -391,7 +392,7 @@ public class SyncSenderHandler extends BaseSyncHandler {
                     int maxSize = awaitingBytes.length;
                     int transferredSize = (int) update.getBytesTransferred();
 
-                    presenter.getView().updateProgressFragment((transferredSize * 100)/maxSize);
+                    presenter.getView().updateProgressFragment((transferredSize * 100) / maxSize);
                 } else {
                     Timber.e("We are waiting for a payload to finish transferring and the bytes for the payload being sent are null");
                 }

@@ -2,14 +2,17 @@ package org.smartregister.p2p.view;
 
 import android.Manifest;
 import android.content.Context;
-import android.support.annotation.RequiresPermission;
 import android.util.AttributeSet;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.ViewGroup;
 
+import androidx.annotation.RequiresPermission;
+
 import com.google.android.gms.vision.CameraSource;
+
 import org.smartregister.p2p.R;
+
 import java.io.IOException;
 
 import timber.log.Timber;

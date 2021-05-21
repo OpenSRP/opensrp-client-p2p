@@ -1,9 +1,8 @@
 package org.smartregister.p2p.contract;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.WorkerThread;
-
+import androidx.annotation.NonNull;
+import androidx.annotation.WorkerThread;
 
 /**
  * Provide a unique ID to be used by the app.

@@ -1,6 +1,6 @@
 package org.smartregister.p2p.shadows;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import org.robolectric.annotation.Implementation;
 import org.robolectric.annotation.Implements;

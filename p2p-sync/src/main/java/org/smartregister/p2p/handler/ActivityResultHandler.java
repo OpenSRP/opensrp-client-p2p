@@ -1,6 +1,6 @@
 package org.smartregister.p2p.handler;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * Created by Ephraim Kigamba - ekigamba@ona.io on 11/03/2019

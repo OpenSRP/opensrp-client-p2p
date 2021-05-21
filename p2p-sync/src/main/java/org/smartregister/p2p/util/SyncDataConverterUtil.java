@@ -1,8 +1,9 @@
 package org.smartregister.p2p.util;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import org.smartregister.p2p.R;
 
@@ -24,8 +25,8 @@ public class SyncDataConverterUtil {
         BufferedInputStream bis = new BufferedInputStream(in);
         ByteArrayOutputStream buf = new ByteArrayOutputStream();
         int result = bis.read();
-        while(result != -1) {
-            byte b = (byte)result;
+        while (result != -1) {
+            byte b = (byte) result;
             buf.write(b);
             result = bis.read();
         }
@@ -38,7 +39,7 @@ public class SyncDataConverterUtil {
 
         int total = 0;
         if (transferItems != null) {
-            for (String key: transferItems.keySet()) {
+            for (String key : transferItems.keySet()) {
                 Integer count = transferItems.get(key);
                 if (count != null) {
                     total += count;

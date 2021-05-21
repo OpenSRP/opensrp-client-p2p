@@ -1,7 +1,7 @@
 package org.smartregister.p2p.sync.handler;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import org.smartregister.p2p.contract.P2pModeSelectContract;
 import org.smartregister.p2p.model.DataType;

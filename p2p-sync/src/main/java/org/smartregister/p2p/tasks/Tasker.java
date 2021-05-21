@@ -1,7 +1,7 @@
 package org.smartregister.p2p.tasks;
 
 import android.os.AsyncTask;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.Executor;

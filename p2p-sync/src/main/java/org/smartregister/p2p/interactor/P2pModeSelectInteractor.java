@@ -1,8 +1,8 @@
 package org.smartregister.p2p.interactor;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import android.widget.Toast;
 
 import com.google.android.gms.common.api.ApiException;
